@@ -1,0 +1,29 @@
+<script>
+    let horas=60;
+    let horasex;
+    let horas_ordinarias=265;
+    let horas_extras= 350;
+    let totalnormal;
+    let total1;
+    let total_horas_extra;
+
+    if(horas <= 40)
+    {
+         totalnormal= horas*horas_ordinarias;
+        
+       console.log("Su sueldo normal es de $:" + totalnormal);
+     }
+
+     else(horas >= 40)
+     {
+       
+        total1= horas-40;
+        console.log("Su horas extras son: "+ total1);
+        total_horas_extra= total1*horas_extras;
+     
+         console.log("Su sueldo por horas extras es de $:"+total_horas_extra);
+     }
+     console.log("Su sueldo normal es de $:"+totalnormal);
+     console.log("Su horas extras son: "+ total1);
+     console.log("Su sueldo por horas extras es de $:"+total_horas_extra);
+</script>
