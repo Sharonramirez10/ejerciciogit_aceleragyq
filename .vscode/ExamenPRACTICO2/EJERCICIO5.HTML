@@ -1,0 +1,63 @@
+<script>
+class Persona{
+    nombre;
+    apellido;
+    edad;
+    getDetalles(){
+        console.log("Persona: " + this.nombre + " " + this.apellido + " de " + this.edad  + " años");
+    }
+    constructor(name, lastName, age){
+        this.nombre = name;
+        this.apellido = lastName;
+        this.edad = age;
+    }
+
+    getDetalles(){
+        console.log("Jugador: " + this.nombre + " " + this.apellido + " de " + this.edad  + " años");
+    }
+}
+class Jugador extends Persona{
+    constructor (name, lastName, age, posicion){
+            super (name, lastName, age);
+    }
+    getDetalles(){
+        console.log  ("Persona: " + this.nombre + " " + this.apellido + " de " + this.edad  + " años");
+        console.log ("Jugador: " + this.nombre + " " + this.apellido + " de " + this.edad  + " años" + this.posicion);
+    }
+}
+class Entrenador extends Persona {
+    constructor (name, lastName, age, añosdeexperiencia, id){
+        super(name, lastName, age);
+    }
+    getDetalles(){
+        console.log  ("Jugador: " + this.nombre + " " + this.apellido + " de " + this.edad  + " años");
+        console.log ("Entrenador: " + this.nombre + " " + this.apellido + " de " + this.edad  + " años" + this.añosdeexperiencia + this.id);
+    }
+     generaridfederacion (){
+     let idfederacion="";
+    
+for (let i = 0; i < 5; i ++) {
+    let num = Math.floor(Math.random() * 9);
+    idfedederacion += '' + num;
+}
+}
+}
+class Equipo extends Entrenador  {
+    constructor (name, lastName, age, posicion, añosdeexperiencia, id){
+        super (name, lastName, age, posicion, añosdeexperiencia, id);
+    }
+    getDetalles(){
+        console.log  ("Jugador: " + this.nombre + " " + this.apellido + " de " + this.edad  + " años");
+        console.log ("Entrenador: " + this.nombre + " " + this.apellido + " de " + this.edad  + " años" + this.añosdeexperiencia + this.id);
+    }
+ director1 (){
+    let director;
+    let jugadores= [,,,];
+ }
+
+
+}
+
+
+
+</script>
