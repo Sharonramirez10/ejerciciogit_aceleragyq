@@ -1,6 +1,6 @@
 import React, { useContext,  useReducer } from 'react';
 import {MdDelete} from 'react-icons/md';
-import {Container, ContainerList,  TravelItem, Info, Quantity, Subtotal} from './styles'; 
+import {Container, ContainerList,  TravelItem, Info, Quantity, Subtotal, Total} from './styles'; 
 import imagen from '../../assets/imagen.svg';
 import CartContext from '../../context/cart';
 
@@ -9,7 +9,10 @@ import CartItem from '../../components/CartItem';
 
 function Cart(){
     const { state, setState} = useContext(CartContext);
-
+   let  total=0;
+   state.cart.map((el) => {
+    total+=el.quantity * el.price;
+   });
     
     return (
              <Container>
@@ -31,6 +34,11 @@ function Cart(){
                      </Subtotal>
                    </TravelItem>
                 ))}
+                <Total>
+                    <div>
+                        <p>Total: $ {parseFloat(total).toFixed(2)}</p>
+                    </div>
+                </Total>
                                 
                 </ContainerList>     
             </Container>

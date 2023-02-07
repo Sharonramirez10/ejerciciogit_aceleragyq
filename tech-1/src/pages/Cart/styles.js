@@ -74,36 +74,12 @@ height: 40px;
 }
 `;
 
-export const Total = styled.div`
+export const Total = styled.ul`
+p {
 padding: 20px;
 display: flex;
 font-weight: 600;
 font-size: 30px;
-align-item: right;
-
-
-strong {
-    font-size:25px;
-    font-weight: 600;
+justify-content:flex-end;
 }
 `;
-export const Cost = styled.div`
-padding: 20px;
-display: flex;
-justify-content:end;
-font-weight:600;
-font-size: 20px;
-align-item: left;
-
-`;
-export const Pagar = styled.div`
-padding: 20px;
-display: flex;
-justify-content:end;
-align-items:baseline;
-font-weight:600;
-font-size: 20px;
-align-item: left;
-
-`;
-export const Id = styled.div``;
